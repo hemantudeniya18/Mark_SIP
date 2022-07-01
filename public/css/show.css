@@ -1,0 +1,43 @@
+.grid-container {
+   position: relative;
+   text-align: center;
+   color: rgb(0, 0, 0);
+}
+/* css for text over image */
+.container{
+   display: grid;
+   position: absolute; 
+   top: 200px; 
+   width: 100%; 
+}
+img{
+   display: flex;
+   width: 100%;
+   height: fit-content;
+}
+.panel{
+   background-size: auto 110%;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: auto;
+   border-radius: 50px;
+   color: #000;
+   flex: 0.5;
+}
+
+.mark{
+   border: 0.3rem;
+   border-color: whitesmoke;
+   border-style: outset;
+   border-radius: 4rem;
+   margin-left: 8rem;
+   margin-right: 8rem;
+   margin-bottom: 9pt;
+}
+.empty{
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+a{
+   color:royalblue
+}

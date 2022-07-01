@@ -1,0 +1,26 @@
+
+.cid-s48P1Icc8J {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: #232323;
+    }
+    section {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    section, .container, .container-fluid {
+        position: relative;
+        word-wrap: break-word;
+    }
+    section {
+        background-color: #ffffff;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+
+    

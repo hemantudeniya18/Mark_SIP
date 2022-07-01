@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADD Event Detail</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="static/css/style.css">
+      <link rel="stylesheet" href="/static/css/navbar.css">
+      <link rel="stylesheet" href="/static/css/addEvent.css">
+      
+  </head>
+  <body>
+    {{>navbar}}
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="tag">Enter Event's Detail</div>
+          <form action="Add-Event-detail" method="POST">
+            <div class="input-bar">
+              <label>Event Name</label>
+                <input type="text" class="form-control" id="event" placeholder="Enter Complete Event name" name="event" required>
+            </div>
+
+            <div>
+              <label>Date</label>
+                <input type="date" class="form-control" id="date" name="date">
+            </div>
+
+            <div>
+              <label>Committee Name</label>
+              <select class="form-control" id="committee" name="committee" placeholder="Enter Committee Name">
+                <option>Cultural</option>
+                <option>Sports</option>
+                <option>Litrecy</option>
+                <option>Technical</option>
+              </select>
+            </div>
+            <div>
+              <label>Budget</label>
+              <input type="number" class="form-control" id="budget" placeholder="Budget(INR)" name="budget">
+            </div>
+
+            <div>
+              <label>Approval Status</label>
+              <select class="form-control" type="name" id="committee" name="appr" placeholder="Enter Approval Status">
+                <option>Approved</option>
+                <option>Not Approved</option>
+              </select>
+            </div>
+              {{>member}}
+              {{>prewinner}}
+              {{>winner}}
+            <div>
+              <label>Complete</label>
+              <select class="form-control" type="name" id="comp" name="comp" required>
+                <option >Select Event Status</option>
+                <option>Completed</option>
+                <option>postpone</option>
+                <option>Comming Soon</option>
+                <option>On Going</option>
+                
+              </select>
+
+
+            </div>
+                <input type="checkbox" required>
+                <label>Form Filled</label>
+        <br>
+           {{>upload}}   
+
+              {{!--  <div class="upload_file">
+                  {{!-- {{>upload}} --}}
+                {{!-- <div>
+                  <label for="name">File Title</label>
+                  <input type="text" id="name" placeholder="Name" 
+                       value="" name="file_name">
+              </div> --}}
+              {{!-- <div>
+                <label for="image">Upload Media</label>
+                <input type="file" id="image" name="file_file">
+              </div>  --}}
+
+
+              {{!-- <div>
+                <button type="submit">Submit</button>
+              </div> --}}
+              </div>
+            <button type="reset" class="button">RESET</button>
+            </div>
+          </div>
+      </form>
+  </body>
+  <script>
+    function mywinner() {
+        const node = document.getElementById("mark4");
+        const clone = node.cloneNode(true);
+        document.getElementById("winner-model").appendChild(clone);
+        }
+
+        function myprewinner() {
+        const node = document.getElementById("mark6");
+        const clone = node.cloneNode(true);
+        document.getElementById("prewinner-model").appendChild(clone);
+        } 
+
+        function mymember() {
+          const node = document.getElementById("mark3");
+          const clone = node.cloneNode(true);
+          document.getElementById("member-model").appendChild(clone);
+        }   
+  
+  </script>
+</html>

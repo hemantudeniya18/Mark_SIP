@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event-Report</title>
+        <link rel="stylesheet" href="static/css/style.css">
+      <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <style>
+      table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+<body>
+{{>header}}
+{{>navbar}}
+
+<h2>{{da.event}}</h2>
+Indian Institute of Information Technology  <br>
+On, {{da.date}} ,<q> {{da.event}}</q> Event Held by {{da.committee}} Committee An its Coordinator are 
+{{#each da.member}}
+<table style="width:100%">
+    <tr class="main">
+      <th scope="col">Members Name</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+    </tr>
+
+    <tr class="main">
+      <td scope="col">{{this.member_name}}</td>
+      <td scope="col">{{this.member_id  }}</td>
+      <td scope="col">{{this.member_mobile  }}</td>
+    </tr>
+</table>
+{{/each}}
+
+
+<br><br><br>
+
+
+<table style="width:100%">
+    <tr class="main">
+      <th scope="col">Pre-winner Name</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Prize Amount(INR)</th>
+    </tr>
+{{#each da.prewinner}}
+    <tr class="main">
+      <td scope="col">{{this.prewinner_name}}</td>
+      <td scope="col">{{this.prewinner_id  }}</td>
+      <td scope="col">{{this.prewinner_mobile  }}</td>
+      <td scope="col">{{this.prewinner_prize}}</td>
+    </tr>
+</table>
+{{/each}}
+
+
+<br><br><br>
+<table style="width:100%">
+    <tr class="main">
+      <th scope="col">Winner Name</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Prize Amount(INR)</th>
+    </tr>
+{{#each da.winner}}
+    <tr class="main">
+      <td scope="col">{{this.winner_name}}</td>
+      <td scope="col">{{this.winner_id  }}</td>
+      <td scope="col">{{this.winner_mobile  }}</td>
+      <td scope="col">{{this.winner_prize}}</td>
+    </tr>
+</table>
+{{/each}}
+
+<h1>File</h1>
+    <div>
+
+      <div>
+        <div>
+          <img src=`data:image/{{this.contentType}}` alt="file" />
+            <h5>{{da.file_name}}</h5>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

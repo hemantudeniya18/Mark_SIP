@@ -1,0 +1,97 @@
+body{
+        height: 100%;
+        width: 100%; /* full window width */
+        text-align: center;
+
+}
+.tag{
+  font-size: 28pt;
+  padding: 4rem;
+  background-color: rgba(52, 3, 3, 0.593);
+  margin-bottom: 3rem;
+  font-weight:1000;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  font-family:'Times New Roman', Times, serif;
+}
+label{
+        font-size: larger;
+}
+.form-control{
+  border: 2px black;
+  border-top-left-radius:15pt;
+  border-bottom-right-radius:15pt ;
+  background-color: silver;
+}
+#winner-model{
+        border: 2pt #000;
+}
+#mark4{
+        padding-top: 2rem;
+}
+
+input{
+
+        border-radius: 7pt;
+        opacity: 1;
+        text-align: center;
+}
+
+/* 8888888888888888888888888888888888888888888888888888 */
+/* Member.css */
+#mark3{
+        padding-top: 2rem;
+}
+button{
+        margin-top: 10pt;
+        display: inline;  
+        align-items:center;
+        border-radius: 6rem;
+        height: 2rem;
+        width: 15%;
+}
+.mem-row{
+        height: 45px;
+        width: 100px;
+        display: inline;
+        padding: 2rem;
+}
+
+.mem-row input{
+        width:15%
+}
+
+
+/* 8888888888888888888888888888888888888888888888888888 */
+/* upload.css */
+.upload-content{
+        display: inline;
+}
+.upload-container{
+        padding-top: 2rem;
+}
+
+/* 8888888888888888888888888888888888888888888888888888 */
+/* pre Event winner .css */
+.prewin-row{
+        display: inline;
+        
+}
+.prewin-row input{
+        height: 2.1rem;
+        width: 25%;       
+}
+#prewin-container4{
+        margin-left: 3rem;        
+}
+#prewin-container3{
+        padding-left: 3.8rem;        
+}
+
+/* winnner.css */
+.win-row{
+        height: 2.1rem;
+        width: 70pt;
+        display: inline;
+        
+}

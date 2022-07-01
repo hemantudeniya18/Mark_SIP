@@ -1,0 +1,45 @@
+<div class="grid-container">
+      <img class="img1" src="/static/image/geo1.webp" />
+      {{!-- <img class="img2" src="/static/image/geo2.webp" /> --}}
+      
+      <div class="container">
+        {{#each data}}
+        
+        <div class="mark">
+        <span class="panel" id="event"><h3>{{event}}</h3></span>
+        <br>
+        <span class="panel active fa fa-calendar" id="date">
+            {{date}}
+        </span>
+        <br>
+        <span class="panel" id="committee">{{committee}}</span>
+        <br>
+        <span class="panel" id="appr">{{appr}}</span>
+        <br>
+        <span class="panel fa fa-money" id="budget">
+            {{budget}}
+        </span>
+        <br>
+        
+        <span class="panel" id="comp">{{comp}}</span>
+        <br>
+        
+        <span class="panel" id="link"> For More Details : 
+          {{!-- <button>
+            <a href="/show/report">Click Here</a>  </button> --}}
+        <button>
+          <a class="my-report" href='/show/report/{{_id}}'>
+          Report File</a>
+            
+        </button>
+	    	
+
+        {{!--  --}}
+        <div class="empty">
+        </div>
+
+        </div>
+        {{/each}}
+      </div>
+      
+</div>
