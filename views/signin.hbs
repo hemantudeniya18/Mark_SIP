@@ -7,16 +7,24 @@
 <link rel="stylesheet" href="/static/css/signup.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/index/footer.css">
+
+<title>Log-in</title>
+    <link rel="icon" href="/static/image/title-logo.png" type="image/icon type">
 </head>
 <body>
+  
   {{>header}}
-  {{>navbar}}
+  <ul class="topnav">
+    {{>navbar}}
+  </ul>
 
-<form class="modal-content animate" action="/Sign-in" method="POST">
-
-    <img class="img2" src="/static/image/geo2.webp" />
+  
+<form class="modal-content" action="/Sign-in" method="POST">
+<img class="img2" src="/static/image/geo3.jpg" />
     <div class="container">
-      <label><b>Email Addr  ess</b></label>
+
+      <label><b>Email Address</b></label>
       <input type="email" placeholder="Enter username" name="email" required />
       <br>
 
@@ -28,15 +36,8 @@
       </label>
       
       <button type="submit">Login</button>
-      
     </div>
-{{!-- 
-    <div class="container" style="background-color:#010e074e">
-      <span class="psw">Forgot <a href="#">password?</a></span>
-  </div> --}}
 </form>
-
-
-
+{{>footer}}
 </body>
 </html>

@@ -1,17 +1,21 @@
 body{
         height: 100%;
-        width: 100%; /* full window width */
+        width: 100%; 
         text-align: center;
+        align-items: center;
+}
 
+.card{
+        align-items: center;
+        text-align: center;
+        background-color: rgba(240, 248, 255, 0.563);
 }
 .tag{
   font-size: 28pt;
-  padding: 4rem;
-  background-color: rgba(52, 3, 3, 0.593);
-  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: rgba(81, 35, 207, 0.275);
   font-weight:1000;
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-style: preserve-3d;
+  text-shadow: 2px 2px rgba(133, 37, 218, 0.39);
   font-family:'Times New Roman', Times, serif;
 }
 label{
@@ -21,26 +25,46 @@ label{
   border: 2px black;
   border-top-left-radius:15pt;
   border-bottom-right-radius:15pt ;
-  background-color: silver;
-}
-#winner-model{
-        border: 2pt #000;
-}
-#mark4{
-        padding-top: 2rem;
+  background-color: rgba(192, 192, 192, 0.479);
+  width: 100%;
 }
 
-input{
 
-        border-radius: 7pt;
+select ,input{
+        height: fit-content;
         opacity: 1;
-        text-align: center;
+        text-align: center;  
+        box-shadow: 5px 2px rgba(0, 0, 0, 0.178);
 }
 
+.box{
+        width:100%;
+        display: flex;
+}
+.box1{
+        align-items: center;
+        width: 50%;
+        /* background-color: rgb(117, 42, 229); */
+        right: 1;
+        padding: 2rem;
+}
+.box2{
+        align-items: center;
+        width: 50%;
+        /* background-color: rgb(170, 88, 85);   */
+        left: 1;
+        padding: 2rem;
+        
+}
+table{
+        align-items: center;
+        background-color: aquamarine;
+}
 /* 8888888888888888888888888888888888888888888888888888 */
 /* Member.css */
-#mark3{
+#member-model{
         padding-top: 2rem;
+        margin-left: 12%;
 }
 button{
         margin-top: 10pt;
@@ -50,20 +74,9 @@ button{
         height: 2rem;
         width: 15%;
 }
-.mem-row{
-        height: 45px;
-        width: 100px;
-        display: inline;
-        padding: 2rem;
-}
-
-.mem-row input{
-        width:15%
-}
-
-
-/* 8888888888888888888888888888888888888888888888888888 */
+/*8888888888888888888888888888888888888888888888888888*/
 /* upload.css */
+
 .upload-content{
         display: inline;
 }
@@ -73,25 +86,12 @@ button{
 
 /* 8888888888888888888888888888888888888888888888888888 */
 /* pre Event winner .css */
-.prewin-row{
-        display: inline;
-        
+#prewinner-model{
+        padding-top: 2rem;
 }
-.prewin-row input{
-        height: 2.1rem;
-        width: 25%;       
-}
-#prewin-container4{
-        margin-left: 3rem;        
-}
-#prewin-container3{
-        padding-left: 3.8rem;        
+/* winnner.css */
+
+#winner-model{
+        padding-top: 2rem;
 }
 
-/* winnner.css */
-.win-row{
-        height: 2.1rem;
-        width: 70pt;
-        display: inline;
-        
-}

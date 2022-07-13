@@ -29,7 +29,7 @@ const LogSchema = mongoose.Schema({
   password:{
         type:String,
         require:true,
-        min:6
+        // min:6
   },
   tokens:[{
       token:{
@@ -45,20 +45,24 @@ const LogSchema = mongoose.Schema({
 }
 );
 
-LogSchema.methods.generateAutoToken = async function(next) {
+
+/* Generating token  */
+LogSchema.methods.generateAutoToken = async function() {
   try {
     const token = jwt.sign({_id:this._id.toString()},process.env.SECRET_KEY);
     this.tokens = this.tokens.concat({token:token})
     await this.save();
     return token
-    console.log(token);
+    console.log(`logmodel.js (line:54)${token}`);
   } catch (error) {
-    res.send("Error is : " + error);
-    console.log("Error is : " + error);
-  }
+    res.send("Error is(logmodel.js) : " + error);
+    console.log("Error is(logmodel.js) : " + error);
+  }  
   
 }
 
+
+/*  covert password into Hash  */
   LogSchema.pre("save", async function(next) 
   {
     if(this.isModified("password"))
@@ -74,3 +78,18 @@ LogSchema.methods.generateAutoToken = async function(next) {
 
 const logModel = new mongoose.model('login',LogSchema);
 module.exports = logModel
+
+
+/* 
+ const token = await useremail.generateAutoToken();
+      console.log("token is (line:58) : " + token);
+
+
+      res.cookie("jwt", token,{
+        expires: new Date(Date.now() + 600000),
+        httpOnly:true,
+        // secure:true  //only for https
+      })
+      console.log(`This is cookies(line:65) : ${cookie}`);
+      console.log(`This is cookies(line:66) : ${req.cookies.jwt}`); 
+*/

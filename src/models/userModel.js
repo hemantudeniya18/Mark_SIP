@@ -1,94 +1,103 @@
 const mongoose = require('mongoose');
+
 require('../db/database')
-const validator = require('express-validator');
-const UserSchema = mongoose.Schema({
+const validator = require('validator');
+const validate = require('express-validator')
+
+const Schema = mongoose.Schema
+const UserSchema = new Schema({
   date:{
-        type:Date,
-        default:Date.now()
-        
+        type:String,
+        // default:Date.now()
+        // require:true,
+  },
+  duration:{
+    type:String,
   },
   event:{
         type:String,
-        require:true,
-        uppercase:true
+        required:true,
+        uppercase:true,
+        message: 'Provide Event Name '
   },
   committee:{
         type:String,
-        require:true
+        required:true
   },
   budget:{
-        type:Number
+        type:Number,
   },
   appr:{
       type:String
   },
   member:
-  [
-    {
-      /* member_name :String,
-      member_id: Number,
-      member_mobile:Number */
-      member_name :
-      [{
-      type:String
-      }],
-      member_id :
-      [{
-      type:Number
-      }],
-      member_mobile:
-      [{
-      type:Number,
-      min:10,
-      }]
-    }
-  ],
+  {
+    position :[{type:String,uppercase:true}],
+    name:[{type:String,uppercase:true}],
+    institute:[{type:String,uppercase:true}],
+    id:[{type:Number}],
+    mobile:[{type:Number,}]
+  },
 
-  /* pree event winner */
-  prewinner:[{
-    prewinner_name :[{
-      type:String
-    }],
-    prewinner_id :[{
-      type:Number
-    }],
-    prewinner_mobile:[{
-      type:Number
-    }],
-    prewinner_prize:[{
-      type:Number
-    }],
-    prewinner_file:{
-      type:String,
-      default:Date.now()
-    }
-  }],
-    winner:[{
-    winner_name :[{
-      type:String
-    }],
-    winner_id :[{
-      type:Number
-    }],
-    winner_mobile:[{
-      type:Number
-    }],
-    winner_prize:[{
-      type:Number
-    }]
-  }],
+  /* pre event winner */
+  prewinner:
+    {
+    position:[{type:String,uppercase:true}],
+    name :[{type:String,uppercase:true}],
+    institute:[{type:String,uppercase:true}],
+    id :[{type:Number}],
+    mobile:[{type:Number}],
+    prize:[{type:Number}],
+  },
+  winner:{
+    position:[{type:String, uppercase:true}],
+    name :[{type:String,uppercase:true}],
+    institute:[{type:String,uppercase:true}],
+    id :[{type:Number}],
+    mobile:[{type:Number}],  
+    prize:[{type:Number}],
+  },
   comp:{
       type:String
   },
-  file_id:{
-    type: String
+  file_name: {
+    type: String,
+  },
+  file :{
+    data : Buffer,
+    contentType : String
   },
   file_url:
   {
     type: String
   }
-}
-) ;
+}) ;
 
-const userModel = new mongoose.model('users',UserSchema);
-module.exports = userModel
+
+const UserModel = new mongoose.model('users',UserSchema);
+module.exports = UserModel
+
+
+
+
+
+/* 
+const reqString = {
+  type: String,
+  required : true
+}
+
+const reqNumber = {
+  type: Number,
+  required : true
+}
+
+const memberSchema = mongoose.Schema(
+  {     
+    position : reqString,
+    name:reqString,
+    id:reqNumber,
+    mobile:reqNumber
+  } 
+)
+ */

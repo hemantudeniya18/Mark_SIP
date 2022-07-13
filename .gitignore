@@ -2,4 +2,8 @@ node_modules
 
 bin
 
-.env
+.env    
+
+credit.json
+
+credentials.json
