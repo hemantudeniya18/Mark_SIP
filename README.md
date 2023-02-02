@@ -1,33 +1,30 @@
-<h1>
-Event Handling project uses Express.js, Node.js, HTML, CSS, Basic of Java Script With MongoDB database and HBS templets.
-</h1>
+echo "# hemantudeniya18" >> README.md
 
-<h2>
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git branch -M main
+
+git remote add origin https://github.com/hemantudeniya18/Mark_SIP.git
+
+git push -u origin main
+
+
+
+
+git remote add origin https://github.com/hemantudeniya18/Mark_SIP.git
+
+git branch -M main
+
+git push -u origin main
+
+Gymkhana Resources Managemen(GRM) project uses expres.js, Node.js, HTML, CSS, Basic of Java Script With MongoDB database.
+
 GRM project created to handle details of event that held with in organization. It include Basic CRUD operation. Since this project Uses Basic Of all above mentioned languages, it is good or reliable for any begginer to understand. And allow modification to provide flexibility so begginer can upgrade as they want.# Mark_SIP
-</h2>
-
-<h3>
-<img src="IMG\Screenshot_20230202_144505.png"/>
- All Evnents Are showed by date 
-
-<br>
-<br>
-
-<img src="IMG\Screenshot (9).png"/>
-For mare detail  click on "CLICK" button in section for More Details
-
-<br>
-<br>
-
-<img src="IMG\Screenshot_20230202_144531.png"/>
-
-<br>
-<br>
-
-<img src="IMG\Screenshot_20230202_144719.png"/>
-Sign In form for Admin So she/he can add,delete,update data.
-<br>
-<br>
-<img src="IMG\Screenshot_20230202_144738.png"/>
+# Mark_SIP
+# Mark_SIP
 
 </h3>
