@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADD Event Detail</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="static/css/style.css">
+      <link rel="stylesheet" href="/static/css/navbar.css">
+      <link rel="stylesheet" href="/static/css/addEvent.css">
+      <link rel="stylesheet" href="/static/css/upload.css">
+      <script src="/path/to/jquery.min.js"></script>
+      <script src="/path/to/dynamic_forms.js"></script>
+
+
+  </head>
+  <body>
+    {{!-- NAVBAR --}}
+    <nav>
+    <ul class="topnav">
+    {{>navbar}}
+        <li><i class="fa fa-plus"></i><a class="topnav-right" href="/upload">upload</a></li>
+        {{!-- <li><i class="fa fa-plus"></i><a class="topnav-right" href="/delete">Delete </a></li> --}}
+      <li><a href="/logout">Log-Out</a></li>
+    </ul>
+    </nav>
+
+     
+
+          <div class="tag">Enter Event's Detail</div>
+
+          <div class="card">
+          <form action="/Add-Event-detail" method="POST">
+            <div class="box">
+              <div class="box1">
+
+              
+              <label>Event Name</label>
+                <input type="text" class="form-control" id="event" placeholder="Enter Complete Event name" name="event" required>
+
+              <label>Date</label>
+              <input type="date" class="form-control" id="date" name="date"/>
+
+              <label>Duration</label>
+              <input class="form-control" id="duration" name="duration" placeholder="Duaration of Event">
+
+              </div>
+              <div class="box2">
+
+              <label>Committee Name</label>
+              <select class="form-control" id="committee" name="committee" placeholder="Enter Committee Name">
+                <option>Cultural</option>
+                <option>Sports</option>
+                <option>Litrecy</option>
+                <option>Technical</option>
+              </select>
+
+
+              <label>Budget</label>
+              <input type="number" class="form-control" id="budget" placeholder="Budget(INR)" name="budget">
+
+
+              <label>Approval Status</label>
+              <select class="form-control" type="name" id="committee" name="appr" placeholder="Enter Approval Status">
+                <option>Approved</option>
+                <option>Not Approved</option>
+              </select>
+              </div>
+              </div>
+
+              {{>member}}
+
+              {{>winner}}
+           
+              {{>prewinner}}
+        
+              {{!-- </div> --}}
+              {{!-- <div class="member-btn">
+ <button onclick="myroundwinner()" class="fa fa-plus">Add More</button>
+</div>
+              </div> --}}
+
+
+              <label>Complete</label>
+              <select class="form-control" type="name" id="comp" name="comp" required>
+                <option>Completed</option>
+                <option>postpone</option>
+                <option>Comming Soon</option>
+                <option>On Going</option>
+              </select>
+
+
+              <input type="checkbox" required>
+              <label>Form Filled</label>
+              <br>
+            <button type="submit">Submit</button>
+            <button type="reset" class="button">RESET</button>
+      </form>
+      </div>
+      
+  </body>
+  <script>
+    function mywinner() {
+        const node = document.getElementById("mark4");
+        const clone = node.cloneNode(true);
+        document.getElementById("winner-model").appendChild(clone);
+        }
+        function myprewinner() {
+        const node = document.getElementById("mark6");
+        const clone = node.cloneNode(true);
+        document.getElementById("prewinner-model").appendChild(clone);
+        }
+        
+        function mymember() {
+          const node = document.getElementById("mark3");
+          const clone = node.cloneNode(true);
+          document.getElementById("member-model").appendChild(clone);
+        }  
+        
+        
+  </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+{{!--    
+
+
+
+         function myroundwinner() {
+        const node = document.getElementById("round");
+        const clone = node.cloneNode(true);
+        document.getElementById("round-model").appendChild(clone);
+        } 
+
+function myroundwinner() {
+        const node = document.getElementById("round");
+        const clone = node.cloneNode(true);
+        document.getElementById("round-model").appendChild(clone);
+        }
+
+
+         
+
+
+
+
+--}}

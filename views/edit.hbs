@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADD Event Detail</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="static/css/style.css">
+      <link rel="stylesheet" href="/static/css/navbar.css">
+      <link rel="stylesheet" href="/static/css/addEvent.css">
+      <link rel="stylesheet" href="/static/css/upload.css">
+      
+  </head>
+  <body>
+    {{!-- NAVBAR --}}
+    <nav>
+    <ul class="topnav">
+    {{>navbar}}
+        <li><i class="fa fa-plus"></i><a class="topnav-right" href="/upload">upload</a></li>
+        <li><i class="fa fa-plus"></i><a class="topnav-right" href="/delete">Delete </a></li>
+      <li><a href="/logout">Log-Out</a></li>
+    </ul>
+    </nav>
+
+     
+
+          <div class="tag">Update Event's Detail</div>
+
+          <div class="card">
+          <form action="/update/{{up.id}}" method="POST">
+            <div class="box">
+              <div class="box1">
+
+              
+              <label>Event Name</label>
+                <input type="text" class="form-control" id="event" value="{{up.event}}" name="event" required>
+
+              <label>Date</label>
+              <input type="date" class="form-control" id="date" value="{{up.date}}" name="date"/>
+
+              <label>Duration</label>
+              <input class="form-control" id="duration" name="duration" value="{{up.duration}}">
+
+              </div>
+              <div class="box2">
+
+              <label>Committee Name</label>
+              <select class="form-control" id="committee" name="committee" placeholder="Enter Committee Name">
+                <option>Cultural</option>
+                <option>Sports</option>
+                <option>Litrecy</option>
+                <option>Technical</option>
+              </select>
+
+
+              <label>Budget</label>
+              <input type="number" class="form-control" id="budget" placeholder="Budget(INR)" name="budget">
+
+
+              <label>Approval Status</label>
+              <select class="form-control" type="name" id="committee" name="appr" placeholder="Enter Approval Status">
+                <option>Approved</option>
+                <option>Not Approved</option>
+              </select>
+              </div>
+              </div>
+{{!-- %%%%%%%%%%%%%%%%%%%%%  MEMBER DETAIL %%%%%%%%%%%%% --}}
+              {{!-- {{>member}} --}}
+  <table style="background-color: rgba(255, 255, 255, 0);">
+    <h4>Organiser Details</h4>
+    <tr>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Institute/university</th>
+      <th>Student ID</th>
+      <th>Contact Number</th>
+    </tr>
+    
+  <tr>    
+    <td>
+      {{#each up.member.position}}
+        <input placeholder="Institute/University" name="posm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.member.name}}
+        <input placeholder="Institute/University" name="namem" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.member.institute}}
+        <input placeholder="Institute/University" name="insm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.member.id}}
+        <input placeholder="Institute/University" name="idm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.member.mobile}}
+        <input placeholder="Institute/University" name="numberm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+    </tr>
+
+</table>
+
+{{!-- %%%%%%%%%%%%%%%%%%%%% PRE Winner DETAIL %%%%%%%%%%%%% --}}
+              {{!-- {{>preWinner}} --}}
+  <table style="background-color: rgba(255, 255, 255, 0);">
+    <h4>Pre-Winner Details</h4>
+    <tr>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Institute/university</th>
+      <th>Student ID</th>
+      <th>Contact Number</th>
+      <th>Prize</th>
+    </tr>
+    
+  <tr>    
+    <td>
+      {{#each up.prewinner.position}}
+        <input placeholder="Institute/University" name="preposw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.prewinner.name}}
+        <input placeholder="Institute/University" name="prenamew" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.prewinner.institute}}
+        <input placeholder="Institute/University" name="preinsw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.prewinner.id}}
+        <input placeholder="Institute/University" name="idm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.prewinner.mobile}}
+        <input placeholder="Institute/University" name="prenumberw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.prewinner.prize}}
+        <input placeholder="Institute/University" name="preprizew" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+    </tr>
+
+</table>
+
+
+
+{{!-- %%%%%%%%%%%%%%%%%%%%% Winner DETAIL %%%%%%%%%%%%% --}}
+              {{!-- {{>Winner}} --}}
+  <table style="background-color: rgba(255, 255, 255, 0);">
+    <h4>Winner Details</h4>
+    <tr>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Institute/university</th>
+      <th>Student ID</th>
+      <th>Contact Number</th>
+      <th>Prize</th>
+    </tr>
+    
+  <tr>    
+    <td>
+      {{#each up.winner.position}}
+        <input placeholder="Institute/University" name="posw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.winner.name}}
+        <input placeholder="Institute/University" name="namew" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.winner.institute}}
+        <input placeholder="Institute/University" name="insw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.winner.id}}
+        <input placeholder="Institute/University" name="idm" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.winner.mobile}}
+        <input placeholder="Institute/University" name="numberw" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+
+    <td>
+      {{#each up.winner.prize}}
+        <input placeholder="Institute/University" name="prizew" value="{{.}}"> <br> 
+        {{/each}}
+    </td>
+    </tr>
+
+</table>
+
+
+
+
+              {{!-- <div class="round">
+              <div id="round-model">
+              {{>prewinner}}
+              </div>
+
+               <div class="round-btn">
+                 <button onclick="myroundwinner()" class="fa fa-plus">Add More Round</button>
+                </div>
+
+              </div> --}}
+
+
+              <label>Complete</label>
+              <select class="form-control" type="name" id="comp" name="comp" required>
+                <option>Completed</option>
+                <option>postpone</option>
+                <option>Comming Soon</option>
+                <option>On Going</option>
+              </select>
+
+
+              <input type="checkbox" required>
+              <label>Form Filled</label>
+              <br>
+            <button type="submit">Submit</button>
+            <button type="reset" class="button">RESET</button>
+      </form>
+      </div>
+      
+  </body>
+ 
+</html>

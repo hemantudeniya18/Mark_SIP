@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+        <link rel="icon" href="/static/image/title-logo.png" type="image/icon type">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="refresh" content="delay_time; URL=new_website_url" />
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/show.css">
+        <link rel="stylesheet" href="/static/css/navbar.css">
+        <link rel="stylesheet" href="/static/css/header.css">
+        <link rel="stylesheet" href="/static/css/index/footer.css">
+</head>
+<body>
+  {{>header}}
+  <hr>
+  <ul class="topnav">
+    {{>navbar}}
+  </ul>
+  <div class="grid-container">
+      <img class="img1" src="/static/image/geo1.webp" />
+      
+      <div class="container">    
+        <table class="main">
+          <h2><strong>EVENTS</strong></h2>
+          <tr>
+            <th scope="col">Date(YYYY/MM/DD)</th>
+            <th scope="col">Event Name</th>
+            <th scope="col">Committee</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Status</th>
+            <th scope="col">For More Details</th>
+            <th scope="col">Edit</th>
+            
+          </tr>
+          {{#each data}}
+
+          <tr class="main">
+            <td scope="col">{{date}}</td>
+            <td scope="col">{{event}}</td>
+            
+            <td scope="col">{{committee}}</td>
+            <td scope="col">{{duration}}</td>
+            <td scope="col">{{comp}}</td>
+            <td scope="col">
+              <a class="my-report" href='/show/report/{{_id}}'>Click</a></span>
+            </td>
+
+            <td><a href="/show/{{id}}" onclick="return confirm('Are you Authenticate to delete this record ?');" class="fa fa-trash">
+                </a>
+                <a href="/update/{{id}}" class="fa fa-edit" onclick="return confirm('Are you Authenticate to update this Event');"></a>     
+            </td>
+          </tr>
+          {{/each}}
+        </table>
+        
+      
+</div>
+
+{{>footer}}
+
+</body>
+
+
+</html>

@@ -1,0 +1,122 @@
+body{ 
+  height: 100%;
+  width:100%;
+  text-align: center;
+  align-items: center;
+}
+
+.card{
+  height: fit-content;
+  /* width:fit-content;  */
+  align-items: center;
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0.563);
+}
+.tag{
+  height: fit-content;
+  font-size: 28pt;
+  padding: 2rem;
+  background-color: rgba(81, 35, 207, 0.275);
+  font-weight:1000;
+  text-shadow: 2px 2px rgba(133, 37, 218, 0.39);
+  font-family:'Times New Roman', Times, serif;
+}
+label{
+  height: fit-content;
+  width:fit-content; 
+        font-size: larger;
+}
+.form-control{
+  height: fit-content;
+  width:fit-content; 
+  border: 2px black;
+  border-top-left-radius:15pt;
+  border-bottom-right-radius:15pt ;
+  background-color: rgba(192, 192, 192, 0.479);
+  width: 100%;
+}
+
+
+select ,input{
+  opacity: 1;
+  text-align: center;  
+  box-shadow: 5px 2px rgba(0, 0, 0, 0.178);
+}
+
+.box{
+  height: fit-content;
+  width:fit-content; 
+        width:100%;
+        display: flex;
+}
+.box1{
+  height: fit-content;
+  width:fit-content; 
+        align-items: center;
+        width: 50%;
+        /* background-color: rgb(117, 42, 229); */
+        right: 1;
+        padding: 2rem;
+}
+.box2{
+  height: fit-content;
+  width:fit-content; 
+        align-items: center;
+        width: 50%;
+        left: 1;
+        padding: 2rem;
+        
+}
+table{
+  height: fit-content;
+  width:fit-content; 
+  text-align: center;
+  align-items: center;
+  background-color: aquamarine;
+}
+/* 8888888888888888888888888888888888888888888888888888 */
+/* Member.css */
+#member-model{
+  height: fit-content;
+  width:fit-content; 
+        padding-top: 2rem;
+        margin-left: 12%;
+}
+button{
+  
+        margin-top: 10pt;
+        display: inline;  
+        align-items:center;
+        border-radius: 6rem;
+        height: 2rem;
+        width: 15%;
+}
+/*8888888888888888888888888888888888888888888888888888*/
+/* upload.css */
+
+.upload-content{
+        display: inline;
+}
+.upload-container{
+        padding-top: 2rem;
+}
+
+/* 8888888888888888888888888888888888888888888888888888 */
+/* pre Event winner .css */
+#prewinner-model{
+        padding-top: 2rem;
+}
+.round{
+  left: 1;
+  /* background-color: rgb(37, 117, 187); */
+}
+.round input{
+  left:1;
+}
+/* winnner.css */
+
+#winner-model{
+  margin-left: 8%;
+  padding-top: 2rem;
+}
+

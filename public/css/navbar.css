@@ -1,0 +1,40 @@
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+ul {
+    list-style:none;
+    display: flex;
+    justify-self:center;
+    background-color: aliceblue;
+  } 
+  a {
+    text-decoration: none;
+    color: #510e0e;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+  }
+  a:hover{
+    color: crimson;
+  }
+  ul:hover{
+    transition-duration: 7s;
+    background-color:rgb(117, 85, 85);
+  }
+  i{
+    color: rgba(0, 0, 0, 0.508);
+    size :2rem;
+  }
+  li {
+    
+    margin: 10px;
+  }
+  
+   
+  

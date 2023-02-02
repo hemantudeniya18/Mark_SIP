@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/signin.css">
+<link rel="stylesheet" href="/static/css/navbar.css">
+<link rel="stylesheet" href="/static/css/signup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/index/footer.css">
+
+<title>Log-in</title>
+    <link rel="icon" href="/static/image/title-logo.png" type="image/icon type">
+</head>
+<body>
+  
+  {{>header}}
+  <ul class="topnav">
+    {{>navbar}}
+  </ul>
+<img class="img2" src="/static/image/geo3.jpg" />
+  
+<form action="/Sign-in" method="POST">
+
+    <div class="container">
+
+      <label><b>Email Address</b></label>
+      <input type="email" placeholder="Enter username" name="email" required />
+      <br>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required />
+        
+      <label class="checkbox">
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      
+      <button type="submit">Login</button>
+    </div>
+</form>
+{{!-- {{>footer}} --}}
+</body>
+</html>

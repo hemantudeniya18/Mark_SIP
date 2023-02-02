@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event-Report</title>
+      <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/report.css">
+
+</head>
+<body>
+{{>header}}
+<ul class="topnav">
+    {{>navbar}}
+  </ul>
+
+<h2><u> {{da.event}} </u></h2>
+<section>
+    <br>
+    <div class="box">
+      <div class="right">
+        {{!-- {{#each da}} --}}
+        DATE: {{  da.date}} <br>
+        {{!-- {{/each}} --}}
+        DUARATION : {{da.duration}} <br>
+        APPROVAL STATUS : {{da.appr}} <br>
+        </div>
+      <div class="left">
+        ORGANISING COMMITTEE : {{da.committee}} <br>
+        BUDGET(INR) : {{da.budget}} <br>
+        CURRENT STATUS : {{da.comp}} <br>
+      </div>
+    </div>
+</section>
+
+<section>
+<table>
+  <h2> Coordinator of Event</h2>
+    <tr class="main">
+      <th scope="col">Position</th>
+      <th scope="col">Members Name</th>
+      <th scope="col">Institute/University</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+    </tr>
+{{!-- {{#each da.member}} --}}
+    <tr class="main">
+      <td scope="col">
+        {{#each da.member.position}}
+        {{.}} <br> <hr>
+        {{/each}}  
+      </td>
+
+      <td scope="col">
+        {{#each da.member.name}}
+        {{.}} <br> <hr>
+        {{/each}}
+      </td>
+
+      <td scope="col">
+        {{#each da.member.institute}}
+        {{.}} <br> <hr>
+        {{/each}}
+      </td>
+
+
+      <td scope="col">
+        {{#each da.member.id}}
+        {{.}} <br> <hr>
+        {{/each}} 
+      </td>
+
+      <td scope="col">
+        {{#each da.member.mobile}}
+        {{.}} <br> <hr>
+        {{/each}} 
+      </td>
+    </tr>
+  {{!-- {{/each}} --}}
+</table>
+<br>
+
+<table>
+  <h2>Winners</h2>
+    <tr class="main">
+      <th scope="col">Position</th>
+      <th scope="col">Winner Name</th>
+      <th scope="col">Institute/University</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Prize Amount(INR)</th>
+    </tr>
+{{!-- {{#each da.winner}} --}}
+
+    <tr class="main">
+      <td scope="col">
+        {{#each da.winner.position}}
+        {{.}} <br> <hr>
+        {{/each}}  
+      </td>
+
+      <td scope="col">
+        {{#each da.winner.name}}
+        {{.}} <br> <hr>
+        {{/each}}
+      </td>
+
+      <td scope="col">
+        {{#each da.winner.institute}}
+        {{.}} <br> <hr>
+        {{/each}}
+      </td>
+
+      <td scope="col">
+        {{#each da.winner.id}}
+        {{.}} <br> <hr>
+        {{/each}} 
+      </td>
+
+      <td scope="col">
+        {{#each da.winner.mobile}}
+        {{.}} <br> <hr>
+        {{/each}} 
+      </td>
+
+      <td scope="col">
+        {{#each da.winner.prize}}
+        {{.}} <br> <hr>
+        {{/each}} 
+      </td>
+    </tr>
+    {{!-- {{/each}} --}}
+   
+</table>
+
+<br>
+{{!-- {{#unless da.prewinner.name}} --}}
+{{#if da.prewinner.position.[0]}}
+  <table id="preevent-table">
+  <h2>Pre-Event Winners</h2>
+    <tr class="main">
+      <th scope="col">Round</th>
+      <th scope="col">Position</th>
+      <th scope="col">Pre-winner Name</th>
+      <th scope="col">Institute/University</th>
+      <th scope="col">Student ID</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Prize Amount(INR)</th>
+    </tr>
+    
+    <tr class="main">
+      <td scope="col">
+        {{#each da.prewinner.round}}
+        {{.}} <br> 
+        {{/each}}  
+      </td>
+
+      <td scope="col">
+        {{#each da.prewinner.position}}
+        {{.}} <br> 
+        {{/each}}  
+      </td>
+
+      <td scope="col" class="prename">
+        {{#each da.prewinner.name}}
+        {{.}} <br> 
+        {{/each}}
+      </td>
+
+      <td scope="col">
+        {{#each da.prewinner.institute}}
+        {{.}} <br> 
+        {{/each}}
+      </td>
+      
+      <td scope="col">
+        {{#each da.prewinner.id}}
+        {{.}} <br> 
+        {{/each}} 
+      </td>
+
+      <td scope="col">
+        {{#each da.prewinner.mobile}}
+        {{.}} <br> 
+        {{/each}} 
+      </td>
+
+      <td scope="col">
+        {{#each da.prewinner.prize}}
+        {{.}} <br> 
+        {{/each}} 
+      </td>
+    </tr>
+  </table>
+ {{else}}
+    
+    {{/if}}
+ 
+{{!-- {{/unless}} --}}
+</section>
+
+{{#if da.file_name}}
+<section class="file">
+<h3>For more details : <a class="link" href="../../static/files/{{da.file_name}}"><i>{{da.file_name}} </i></a></h3>
+</section>
+{{else}}
+{{/if}}
+
+</body>
+</html>

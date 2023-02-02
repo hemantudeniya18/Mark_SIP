@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/static/css/signup.css">
+  <link rel="stylesheet" href="/static/css/navbar.css">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="topnav">
+    {{>navbar}}
+    </ul>
+  <form class="modal-content animate" action="/Sign-up" method="post">
+<h1>registration form</h1>
+  <div class="comtainer"></div>
+    <label><b>Name</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+    <label><b>Email address</b></label>
+      <input type="email" placeholder="Enter Valid Email Adress" name="email" required>
+    <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+    <label><b>Confirm Password</b></label>
+      <input type="password" placeholder="Re-Enter Password" name="CNFpassword" required>
+    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="button" class="cancelbtn" >Cancel</button>
+  </div>
+  
+</form>  
+</body>
+</html>

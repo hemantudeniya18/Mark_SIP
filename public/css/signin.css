@@ -1,0 +1,39 @@
+/* Modal Content/Box */
+
+.container {
+  position: absolute; 
+  top: 300px; 
+  width:50%;
+  height: fit-content;
+  margin-left: 20%;
+
+}
+label{
+  color: black;
+  font-weight: 600;
+}
+body {
+  font-family: Arial, Helvetica,sans-serif;
+  background-color: #fff;
+}
+
+input{
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-position: center;
+  border-style: double;
+  background-color: rgba(255, 255, 255, 0);
+}
+img{
+  /* display: flex; */
+  width: 100%;
+  height: min-content;
+}
+/* Set a style for all buttons */
+button{
+  color: black;
+  font-size: 12pt;
+  font-weight: 600;
+  border-radius: 1rem;
+}

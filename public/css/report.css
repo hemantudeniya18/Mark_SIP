@@ -1,0 +1,66 @@
+body{
+  background-image: url("https://carrickswan.com/wp-content/uploads/2016/04/site-background.jpg");
+  width: 100%;
+  height:100%;
+  background-color: #000
+}
+th, td{
+  text-align: center;
+  border:1px solid black;  
+  background-color:rgba(220, 220, 220, 0.411)
+}
+
+table{
+  width: 95%;
+  padding-left:2.5%; 
+  padding-right:2.5%;
+  padding-bottom: 2rem;
+}
+
+.prename{
+  empty-cells: hide;
+}
+
+h2{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.link{
+  color: rgb(60, 0, 255)
+}
+p{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+section{
+  text-align: center;
+}
+.detail{
+  font-style:inherit;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.box{
+  width:100%;
+  display: flex;
+}
+.right{
+  margin-left: 3%;
+  text-align: start;
+  margin-right: 20%;
+  font-weight: 700;
+  width: 60%;
+  right: 1;
+}
+.left{
+  text-align: start;
+  margin-left: 20%;
+  width: 50%;
+  left: 1;
+  font-weight: 700;
+}
+.file{
+  text-align:start ;
+}
